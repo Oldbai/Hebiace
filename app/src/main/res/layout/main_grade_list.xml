@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grade_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp"
+    app:cardBackgroundColor="@android:color/holo_orange_light"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:contentPadding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/grade_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/grade_course_year_term"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="TextView"
+                            android:textAlignment="textEnd"
+                            android:textSize="12sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/course_id"
+                                    android:textSize="14sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/grade_course_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="成绩"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/course_credit"
+                                    android:textSize="14sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/grade_course_credit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="学分"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="14sp"/>
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/course_arr"
+                                    android:textSize="14sp"/>
+
+                                <TextView
+                                    android:id="@+id/grade_course_arr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="属性"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/course_total_grade"
+                                    android:textSize="14sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/grade_course_total_grade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="成绩"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="14sp"/>
+                        </LinearLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>

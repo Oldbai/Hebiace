@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.oldbai.android.app.hebiace.main.MainActivity">
+    <item
+        android:id="@+id/logout"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:orderInCategory="100"
+        android:title="@string/logout"
+        app:showAsAction="ifRoom"/>
+</menu>

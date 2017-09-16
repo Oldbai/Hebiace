@@ -1,0 +1,32 @@
+<resources>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+    <string name="app_name">一叶知秋</string>
+    <string name="prompt_studentId">学号</string>
+    <string name="prompt_studentPwd">密码</string>
+    <string name="sign_in_btn">登陆</string>
+    <string name="logout">注销</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="activity_main_school">请填写学校名称</string>
+    
+    <string name="student_id">学号</string>
+    <string name="year">学年</string>
+    <string name="term">学期</string>
+    <string name="course_id">课程代号</string>
+    <string name="course_name">课程名称</string>
+    <string name="course_arr">课程属性</string>
+    <string name="course_belongto">所属科目</string>
+    <string name="course_credit">学分</string>
+    <string name="course_gpa">绩点</string>
+    <string name="course_regular_grade">平时成绩</string>
+    <string name="course_midterm_grade">期中成绩</string>
+    <string name="course_final_grade">期末成绩</string>
+    <string name="course_experimental_grade">实验成绩</string>
+    <string name="course_total_grade">总成绩</string>
+    <string name="course_minor_mark">辅修标记</string>
+    <string name="course_makeup_grade">补考成绩</string>
+    <string name="course_rebuild_grade">重修成绩</string>
+    <string name="course_belong_to_college">所属院系</string>
+    <string name="course_rebuild_mark">学号</string>
+
+</resources>
