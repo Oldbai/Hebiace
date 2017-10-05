@@ -102,7 +102,6 @@ public class UserRepository implements UserDataSource {
 
     @Override
     public void saveGrades(Map<String, Grade> gradeMap) {
-        checkNotNull(gradeMap);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         for (Map.Entry<String, Grade> entry : gradeMap.entrySet()) {

@@ -67,13 +67,13 @@ public final class UserPersistenceContract {
 
     public final class API {
         public final class HebiaceApi {
-            public static final String EDU_SERVER_URL = "";
-            public static final String EDU_SERVER_GRADE = "";
+            public static final String EDU_SERVER_URL = "http://jws.hebiace.edu.cn/default2.aspx";
+            public static final String EDU_SERVER_GRADE = "http://jws.hebiace.edu.cn/xscj_gc.aspx?xh=";
         }
 
         public final class HebeinuApi {
-            public static final String EDU_SERVER_URL = "";
-            public static final String EDU_SERVER_GRADE = "";
+            public static final String EDU_SERVER_URL = "http://60.8.194.168:10003/default_vsso.aspx";
+            public static final String EDU_SERVER_GRADE = "http://60.8.194.168:10003/xscjcx.aspx?xh=";
         }
     }
 }
