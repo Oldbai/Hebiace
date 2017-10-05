@@ -12,12 +12,6 @@ import java.util.List;
 public interface GradeContract {
     interface View extends BaseView<Presenter>{
 
-        void setProgressIndicator(boolean active);
-
-        void updataUI();
-
-        void sendToastMessage(String msg);
-
     }
     interface Presenter extends BasePresenter {
 

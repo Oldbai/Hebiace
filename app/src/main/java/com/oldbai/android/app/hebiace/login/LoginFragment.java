@@ -35,6 +35,7 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     private static final String TAG = "LoginFragment";
 
     private LoginContract.Presenter mPresenter;
+
     private AutoCompleteTextView mStudentId;
     private EditText mStudentPwd;
     private Spinner mUniversity;
@@ -42,7 +43,6 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     private School mSchool;
     private String mCurrentUniversityName;
     private ProgressBar mLoginProgressBar;
-
 
     public LoginFragment() {
     }
@@ -54,8 +54,6 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mPresenter = new LoginPresenter(this, getActivity().getApplicationContext());
     }
 
     @Override
@@ -73,9 +71,9 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.login_fragment, container, false);
+        mPresenter = new LoginPresenter(this, getActivity().getApplicationContext());
         mStudentId = rootView.findViewById(R.id.studentId);
         mStudentPwd = rootView.findViewById(R.id.studentPwd);
-
         //选择学校
         mUniversity = rootView.findViewById(R.id.school_spinner);
         mUniversity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -107,11 +105,9 @@ public class LoginFragment extends Fragment implements LoginContract.View {
             public void onClick(View view) {
                 String id = mStudentId.getText().toString();
                 String pwd = mStudentPwd.getText().toString();
-
                 mPresenter.attemptLogin(id, pwd, mSchool, mCurrentUniversityName);
             }
         });
-
         //进度条
         mLoginProgressBar = rootView.findViewById(R.id.login_progress_bar);
 

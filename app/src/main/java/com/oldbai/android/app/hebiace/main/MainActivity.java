@@ -5,7 +5,9 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
@@ -26,20 +28,16 @@ import com.oldbai.android.app.hebiace.main.StudentInfo.StudentInfoFragment;
 public class MainActivity extends AppCompatActivity implements MainContract.View{
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
     private DrawerLayout mDrawerLayout;
-
     private ViewPager mViewPager;
-
     private TextView mNavTextView;
-
     private MainContract.Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-        //获得Presenter
+        //持有Presenter
         mPresenter = new MainPresenter(this, getApplicationContext());
         //配置Drawer
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -49,12 +47,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         if (navigationView != null) {
             setupDrawerContent(navigationView);
         }
-        //
         View headerView  = navigationView.getHeaderView(0);
         mNavTextView = headerView.findViewById(R.id.nav_schoolname_text);
         //设置工具栏
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        ab.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        ab.setDisplayHomeAsUpEnabled(true);
         //设置PagerAdapter
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -62,15 +62,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         //设置标签视图
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-//        //设置悬浮按钮
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
     }
 
     @Override
@@ -89,9 +80,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.logout) {
-            mPresenter.logout();
-            return true;
+        switch (id) {
+            case R.id.logout:
+                mPresenter.logout();
+                return true;
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -120,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         intent.setData(Uri.parse(url));
         startActivity(intent);
     }
-
 
     /**
      * PagerAdapter

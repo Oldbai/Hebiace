@@ -32,7 +32,7 @@ public class StudentInfoFragment extends Fragment implements StudentInfoContract
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.main_student_info_fragment, container, false);
-
+        //持有Presenter
         mPresenter = new StudentInfoPresenter(this, getActivity().getApplicationContext());
 
         mName = rootView.findViewById(R.id.main_student_info_name);
@@ -41,8 +41,6 @@ public class StudentInfoFragment extends Fragment implements StudentInfoContract
         mGPAYear = rootView.findViewById(R.id.main_student_gpa_year);
         mGPAValue = rootView.findViewById(R.id.main_student_gpa_value);
         mGPATotal = rootView.findViewById(R.id.main_student_gpa_total);
-
-
 
         return rootView;
     }
@@ -58,20 +56,12 @@ public class StudentInfoFragment extends Fragment implements StudentInfoContract
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public void setPresenter(StudentInfoContract.Presenter presenter) {
         mPresenter = presenter;
     }
 
     @Override
     public void showBaseInfo(StudentInfo studentInfo) {
-        if (studentInfo == null) {
-            return;
-        }
         mName.setText(studentInfo.getName());
         mCollege.setText(studentInfo.getCollege());
         mMajor.setText(studentInfo.getMajor());

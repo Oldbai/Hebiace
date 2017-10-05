@@ -31,8 +31,6 @@ public class GradeFragment extends Fragment implements GradeContract.View{
 
     private GradeContract.Presenter mPresenter;
 
-    private ProgressBar mProgressBar;
-
     private List<String> mYearList;
 
     private TabLayout mTabLayout;
@@ -56,7 +54,6 @@ public class GradeFragment extends Fragment implements GradeContract.View{
         mPresenter = new GradePresenter(this, getActivity().getApplicationContext());
         mViewPager = rootView.findViewById(R.id.grade_container);
         mTabLayout = rootView.findViewById(R.id.grade_tabs);
-        mProgressBar = rootView.findViewById(R.id.grade_progress_bar);
 
         updataUI();
 
@@ -69,24 +66,13 @@ public class GradeFragment extends Fragment implements GradeContract.View{
         mPresenter = presenter;
     }
 
-    @Override
-    public void setProgressIndicator(boolean active) {
-        mProgressBar.setVisibility(active ? View.VISIBLE : View.GONE);
-    }
-
-    @Override
-    public void updataUI() {
+    private void updataUI() {
         //获得年份列表
         mYearList = mPresenter.getGradesPageNum();
         //初始化Apapter
         mGradesPagerAdapter = new GradesPagerAdapter(getActivity().getSupportFragmentManager());
         mViewPager.setAdapter(mGradesPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
-    }
-
-    @Override
-    public void sendToastMessage(String msg) {
-        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
     }
 
     //设置标签栏

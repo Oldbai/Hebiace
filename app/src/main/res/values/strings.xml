@@ -2,6 +2,7 @@
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
     <string name="app_name">一叶知秋</string>
+    <string name="bg_image">背景图片</string>
     <string name="prompt_studentId">学号</string>
     <string name="prompt_studentPwd">密码</string>
     <string name="sign_in_btn">登陆</string>

@@ -20,14 +20,10 @@ public class LoginActivity extends AppCompatActivity {
         if (loginFragment == null) {
             //创建新fragment
             loginFragment = LoginFragment.newInstance();
+            //添加fragment
             ActivityUtils.addFragmentToActivity(
                     getSupportFragmentManager(), loginFragment, R.id.fragment_container);
         }
 
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 }

@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_web_school_index"
+        android:icon="@drawable/school"
         android:title="学校官网"/>
     <item
         android:id="@+id/menu_web_school_techingserver"
-        android:title="教务处" />
+        android:icon="@drawable/study"
+        android:title="教务处"/>
     <item
         android:id="@+id/menu_aboutme"
-        android:title="关于" />
+        android:title="关于"
+        android:icon="@drawable/about"/>
     <item
         android:id="@+id/menu_quit"
-        android:title="退出" />
+        android:icon="@drawable/logout"
+        android:title="退出"/>
 </menu>

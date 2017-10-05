@@ -24,7 +24,7 @@ public class StudentInfoPresenter implements StudentInfoContract.Presenter {
     private StudentInfo mStudentInfo;
 
     public StudentInfoPresenter(StudentInfoContract.View view, Context context) {
-        mView = checkNotNull(view);
+        mView = view;
         mView.setPresenter(this);
         mUserRepository = UserRepository.getInstance(context);
     }

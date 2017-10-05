@@ -14,8 +14,6 @@ public class ActivityUtils {
 
     public static void addFragmentToActivity(FragmentManager fragmentManager,
                                              Fragment fragment, int frameId) {
-        checkNotNull(fragmentManager);
-        checkNotNull(fragment);
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.add(frameId, fragment);

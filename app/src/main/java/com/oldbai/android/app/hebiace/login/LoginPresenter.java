@@ -29,7 +29,7 @@ public class LoginPresenter implements LoginContract.Presenter {
     private StudentInfo mStudentInfo;
 
     public LoginPresenter(LoginContract.View view, Context context) {
-        mView = checkNotNull(view);
+        mView = view;
         mView.setPresenter(this);
         //传入context利用DataHlper
         mUserRepository = UserRepository.getInstance(context);

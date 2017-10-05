@@ -21,7 +21,7 @@ public class MainPresenter implements MainContract.Presenter{
     private StudentInfo mStudentInfo;
 
     public MainPresenter(MainContract.View view, Context context) {
-        mView = checkNotNull(view);
+        mView = view;
         mView.setPresenter(this);
         mUserRepository = UserRepository.getInstance(context);
     }
@@ -29,7 +29,6 @@ public class MainPresenter implements MainContract.Presenter{
     public void start() {
         //获得个人信息
         mStudentInfo = mUserRepository.getStudentInfo();
-
         //显示个人信息
         mView.showUserInfo(mStudentInfo);
     }

@@ -26,11 +26,10 @@ public class GradePresenter implements GradeContract.Presenter {
     private UserRepository mUserRepository;
 
     public GradePresenter(GradeContract.View view, Context context) {
-        mView = checkNotNull(view);
+        mView = view;
         mView.setPresenter(this);
         mUserRepository = UserRepository.getInstance(context);
     }
-
 
     @Override
     public void start() {

@@ -8,18 +8,15 @@
              android:orientation="vertical"
              android:padding="16dp"
              android:theme="@style/ThemeOverlay.AppCompat.Dark">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:src="@drawable/logo"/>
 
-                <TextView
-                    android:id="@+id/nav_schoolname_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:text="学校名字"/>
+    <TextView
+        android:id="@+id/nav_schoolname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal"
+        android:text="学校名字"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
 
 </FrameLayout>

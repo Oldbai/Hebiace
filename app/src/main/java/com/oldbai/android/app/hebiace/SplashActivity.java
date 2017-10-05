@@ -1,14 +1,11 @@
 package com.oldbai.android.app.hebiace;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-
-import com.oldbai.android.app.hebiace.data.source.UserPersistenceContract;
 import com.oldbai.android.app.hebiace.data.source.UserRepository;
 import com.oldbai.android.app.hebiace.login.LoginActivity;
 import com.oldbai.android.app.hebiace.main.MainActivity;
